@@ -5,10 +5,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Pavel Kuzhalkov</title>
 </head>
 
 <body>
+    <div class="topnav" id="cv-topnav">                 
+        <a href="#education">Education</a> 
+        <a href="#language">Language</a> 
+        <a href="#code-example">Code</a> 
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>           
+        <a href="javascript:void(0);" class="icon" onclick="topNavFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
     <div class="container">
         <header>
             <div class="name">
@@ -26,7 +38,7 @@
         </header>
         <main class="main-content">
             <div>
-                <section>
+                <section id="about">
                     <h3 class="section-header">ABOUT</h3>
                     <div>
                         Professional software developer with 10+ years of experience in desktop development.
@@ -34,8 +46,8 @@
                         on best practices.
                     </div>
                 </section>
-                <section>
-                    <h3 class="section-header">TECHNICAL PROFICIENCIES</h3>
+                <section id="skills">
+                    <h3 class="section-header">TECHNICAL SKILLS</h3>
                     <div>
                         <ul class="section-list">
                             <li><b>Desktop:</b> .NET, C#, VB</li>
@@ -44,7 +56,7 @@
                         </ul>
                     </div>
                 </section>
-                <section>
+                <section id="experience">
                     <h3 class="section-header">PROFESSIONAL EXPERIENCE</h3>
                     <div>
                         <div class="employer-header">Individual entrepreneur, Minsk, Belarus</div>
@@ -103,13 +115,23 @@
 
                     </div>
                 </section>
-                <section>
+                <section id="code-example">
+                    <h3 class="section-header">CODE EXAMPLE</h3>
+                    <pre class="codeblock">                        
+                        <code >//Codewars javascript "Highest and Lowest"
+function highAndLow(x){ 
+    var res = x.split(" ").map(Number);  
+    return(Math.max(...res) + " " + Math.min(...res))}</code>
+                    </pre>
+                   
+                </section>
+                <section id="language">
                     <h3 class="section-header">LANGUAGE</h3>
                     <div>
                         English level - A2+
                     </div>
                 </section>
-                <section>
+                <section id="education">
                     <h3 class="section-header">EDUCATION</h3>
                     <div>
                         <p>Engineer manufacturing electronic computers </p>
@@ -136,6 +158,17 @@
 
     </div>
 
+    <script>
+        
+        function topNavFunction() {            
+            var x = document.getElementById("cv-topnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+        </script>
 </body>
 
 </html>
